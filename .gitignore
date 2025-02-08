@@ -42,3 +42,7 @@ qrcode.png
 data/
 .next
 out
+
+.DS_Store
+
+dance/

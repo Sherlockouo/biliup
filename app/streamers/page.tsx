@@ -94,7 +94,7 @@ export default function Home() {
   }
 
   const handleUpdate = async (values: any) => {
-    console.log(values);
+    console.log(values)
     delete values.status
     if (values?.postprocessor) {
       values.postprocessor = values.postprocessor.map(
@@ -229,7 +229,12 @@ export default function Home() {
                       {item.remark}
                     </h3>
                   </div>
-                  <Text style={{ width: '101%' }} ellipsis={{ showTooltip: true }} type="tertiary">
+                  <Text
+                    style={{ width: '101%' }}
+                    onClick={() => window.open(item.url, '_blank')}
+                    ellipsis={{ showTooltip: true }}
+                    type="tertiary"
+                  >
                     {item.url}
                   </Text>
                   <div
